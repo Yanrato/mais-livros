@@ -19,7 +19,7 @@ body {
 }
 
 button {
-    @apply p-2 px-4 bg-primary text-primary-Contrast rounded-full
+    @apply p-2 px-4 bg-primary text-primary-Contrast rounded-full hover:underline active:opacity-50 transition-opacity
 }
 
 a {
