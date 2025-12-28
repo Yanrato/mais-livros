@@ -16,8 +16,9 @@ export default function PageHome() {
 
     
     <br></br>
-    <Section />
-    
+    <Section 
+    title='Tendências'/>
+
 
     </main>
   );

@@ -1,10 +1,13 @@
 import { Card } from "../card/card";
 
-export const Section =() => {
+interface ISectionProps {
+    title: string;
+}
+export const Section =({ title }: ISectionProps) => {
     return(
         <section className="mt-8 flex flex-col gap-6">
-            <p className="font-bold text-2xl text-text">Destaques da Semana</p>
-            <ul className="flex gap-4">
+            <p className="font-bold text-2xl text-text">{title}</p>
+            <ul className="gap-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 ">
                 <li> <Card 
     title='Harry Potter e a Pedra Filosofal'
     description='Narra a jornada de Harry, um órfão que vive infeliz com tios mal-humorados, até descobrir que é um bruxo no seu 11º aniversário, sendo convidado para a Escola de Magia de Hogwarts, onde faz amigos (Rony e Hermione) e enfrenta desafios mágicos, enquanto desvenda o mistério por trás da lendária Pedra Filosofal e a ameaça do Lorde Voldemort.'
