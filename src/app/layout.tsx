@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
-import { Rubik, Libre_Baskerville } from "next/font/google";
+import { Nunito} from "next/font/google";
+
+
+import { Header } from "@/components/Header/header";
+
 import "./globals.css";
 
-const rubik = Rubik({
-  variable: "--font-rubik",
-  subsets: ["latin"],
-});
-
-const libreBaskerville = Libre_Baskerville({
-  variable: "--font-libre-baskerville",
+const nunito = Nunito({
+  variable: "--font-nunito",
   subsets: ["latin"],
 });
 
@@ -23,8 +22,8 @@ export default function RootLayout({ children }: IRootLayout) {
   return (
     <html lang="pt-Br">
       <body
-        className={`${libreBaskerville.variable} ${rubik.variable} antialiased`}
-      >
+        className={` ${nunito.variable} antialiased`}>
+          <Header/>
         {children}
       </body>
     </html>
