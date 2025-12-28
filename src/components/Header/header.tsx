@@ -18,12 +18,12 @@ export const Header = () => {
     <nav className="bg-primary py-4 px-6 flex items-center justify-between">
       
       {/* Logo */}
-      <h1 className="text-header font-bold border-2 border-primary-Contrast px-5">
+      <h1 className="text-white font-extrabold border-2 border-primary-Contrast px-5">
         <Link
           href="/"
           className={currentPath === "/" ? active : ""}
         >
-          Mais Livros
+        MAIS LIVROS
         </Link>
       </h1>
 
