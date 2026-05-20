@@ -3,6 +3,7 @@ import { Nunito} from "next/font/google";
 
 
 import { Header } from "@/components/Header/header";
+import { Footer } from "@/components/Footer/footer";
 
 import "./globals.css";
 
@@ -25,6 +26,7 @@ export default function RootLayout({ children }: IRootLayout) {
         className={` ${nunito.variable} antialiased`}>
           <Header/>
         {children}
+        <Footer />
       </body>
     </html>
   );
