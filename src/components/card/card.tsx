@@ -8,25 +8,32 @@ export interface CardProps {
   price: number;
 }
 
-export const Card = ({ title, description, imageUrl, price }: CardProps) => {
+export const Card = ({
+  title,
+  description,
+  imageUrl,
+  price,
+}: CardProps) => {
   return (
-    <article className="flex flex-col gap-4 p-4 border border-gray-300 rounded-xl max-w-sm hover:shadow-md hover:scale-[1.02] transition">
+    <article className="flex flex-col justify-between gap-4 p-4 border border-gray-300 rounded-xl w-full max-w-sm min-h-[700px] hover:shadow-md hover:scale-[1.02] transition">
 
       <Link
         href={`/livros/${encodeURIComponent(title)}`}
         className="flex flex-col gap-4"
       >
-        <h4 className="font-extrabold text-lg">{title}</h4>
+        <h4 className="font-extrabold text-lg min-h-[56px]">
+          {title}
+        </h4>
 
         <Image
           src={imageUrl}
           alt={title}
           width={200}
           height={300}
-          className="rounded-xl object-cover"
+          className="w-full h-[300px] object-cover rounded-xl"
         />
 
-        <p className="line-clamp-4 text-sm text-gray-600">
+        <p className="line-clamp-4 min-h-[96px] text-sm text-gray-600">
           {description}
         </p>
       </Link>

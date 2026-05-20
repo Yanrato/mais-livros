@@ -4,12 +4,20 @@ interface ISectionProps {
   title: string;
   items: CardProps[];
   variant: "grid" | "h-list";
+  onHoverBook?: (book: CardProps) => void;
 }
 
-export const Section = ({ title, items, variant }: ISectionProps) => {
+export const Section = ({
+  title,
+  items,
+  variant,
+  onHoverBook,
+}: ISectionProps) => {
   return (
     <section className="mt-8 flex flex-col gap-6">
-      <h2 className="font-bold text-2xl text-text">{title}</h2>
+      <h2 className="font-bold text-2xl text-text">
+        {title}
+      </h2>
 
       <ul
         data-variant={variant}
@@ -29,6 +37,7 @@ export const Section = ({ title, items, variant }: ISectionProps) => {
           <li
             key={item.title}
             className="w-72 shrink-0"
+            onMouseEnter={() => onHoverBook?.(item)}
           >
             <Card
               title={item.title}
